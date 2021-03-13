@@ -52,7 +52,7 @@ import androidx.navigation.compose.navigate
 import com.example.androiddevchallenge.R
 import com.example.androiddevchallenge.ui.screen.home.HOME_SCREEN_DESTINATION
 import com.example.androiddevchallenge.ui.theme.gray900
-import java.util.*
+import java.util.Locale
 
 const val LOGIN_SCREEN_DESTINATION = "login"
 

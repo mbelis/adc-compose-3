@@ -46,7 +46,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.navigate
 import com.example.androiddevchallenge.R
 import com.example.androiddevchallenge.ui.screen.login.LOGIN_SCREEN_DESTINATION
-import java.util.*
+import java.util.Locale
 
 const val WELCOME_SCREEN_DESTINATION = "welcome"
 
