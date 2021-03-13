@@ -12,13 +12,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.navigate
 import com.example.androiddevchallenge.R
-import com.example.androiddevchallenge.ui.theme.MyTheme
 import java.util.*
 
 const val WELCOME_SCREEN_DESTINATION = "welcome"
@@ -58,7 +55,7 @@ fun WelcomeScreen(navController: NavHostController) {
                     modifier = Modifier.weight(1f).fillMaxHeight()
                 ) {
                     OutlinedButton(
-                        onClick = { /* TODO */ },
+                        onClick = { navController.navigate(LOGIN_SCREEN_DESTINATION) },
                         border = BorderStroke(
                             ButtonDefaults.OutlinedBorderSize, MaterialTheme.colors.primary
                         ),
@@ -77,9 +74,7 @@ fun WelcomeScreen(navController: NavHostController) {
 @Composable
 fun WelcomeScreenBackground(content: @Composable () -> Unit) {
     Surface(
-        modifier = Modifier
-            .fillMaxHeight()
-            .fillMaxWidth(),
+        modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colors.background
     ) {
         Image(
