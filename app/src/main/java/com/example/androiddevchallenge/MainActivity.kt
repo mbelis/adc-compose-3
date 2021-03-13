@@ -23,12 +23,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.androiddevchallenge.screens.welcome.WELCOME_SCREEN_DESTINATION
-import com.example.androiddevchallenge.screens.welcome.WelcomeScreen
 import com.example.androiddevchallenge.ui.screen.home.HOME_SCREEN_DESTINATION
 import com.example.androiddevchallenge.ui.screen.home.HomeScreen
 import com.example.androiddevchallenge.ui.screen.login.LOGIN_SCREEN_DESTINATION
 import com.example.androiddevchallenge.ui.screen.login.LoginScreen
+import com.example.androiddevchallenge.ui.screen.welcome.WELCOME_SCREEN_DESTINATION
+import com.example.androiddevchallenge.ui.screen.welcome.WelcomeScreen
 import com.example.androiddevchallenge.ui.theme.MyTheme
 
 class MainActivity : AppCompatActivity() {
