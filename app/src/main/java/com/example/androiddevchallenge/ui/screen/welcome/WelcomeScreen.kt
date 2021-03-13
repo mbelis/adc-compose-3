@@ -16,6 +16,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.navigate
 import com.example.androiddevchallenge.R
+import com.example.androiddevchallenge.ui.screen.login.LOGIN_SCREEN_DESTINATION
 import java.util.*
 
 const val WELCOME_SCREEN_DESTINATION = "welcome"
@@ -37,10 +38,14 @@ fun WelcomeScreen(navController: NavHostController) {
                 modifier = Modifier.weight(1f)
             )
             Row(
-                modifier = Modifier.fillMaxWidth().height(48.dp)
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(48.dp)
             ) {
                 Column(
-                    modifier = Modifier.weight(1f).fillMaxHeight()
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxHeight()
                 ) {
                     Button(
                         onClick = { /* TODO */ },
@@ -52,7 +57,9 @@ fun WelcomeScreen(navController: NavHostController) {
                 }
                 Spacer(Modifier.width(8.dp))
                 Column(
-                    modifier = Modifier.weight(1f).fillMaxHeight()
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxHeight()
                 ) {
                     OutlinedButton(
                         onClick = { navController.navigate(LOGIN_SCREEN_DESTINATION) },

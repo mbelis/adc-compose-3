@@ -23,10 +23,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.androiddevchallenge.screens.welcome.LOGIN_SCREEN_DESTINATION
-import com.example.androiddevchallenge.screens.welcome.LoginScreen
 import com.example.androiddevchallenge.screens.welcome.WELCOME_SCREEN_DESTINATION
 import com.example.androiddevchallenge.screens.welcome.WelcomeScreen
+import com.example.androiddevchallenge.ui.screen.home.HOME_SCREEN_DESTINATION
+import com.example.androiddevchallenge.ui.screen.home.HomeScreen
+import com.example.androiddevchallenge.ui.screen.login.LOGIN_SCREEN_DESTINATION
+import com.example.androiddevchallenge.ui.screen.login.LoginScreen
 import com.example.androiddevchallenge.ui.theme.MyTheme
 
 class MainActivity : AppCompatActivity() {
@@ -48,6 +50,7 @@ fun MyApp() {
     NavHost(navController = navController, startDestination = WELCOME_SCREEN_DESTINATION) {
         composable(WELCOME_SCREEN_DESTINATION) { WelcomeScreen(navController = navController) }
         composable(LOGIN_SCREEN_DESTINATION) { LoginScreen(navController = navController) }
+        composable(HOME_SCREEN_DESTINATION) { HomeScreen() }
     }
 }
 

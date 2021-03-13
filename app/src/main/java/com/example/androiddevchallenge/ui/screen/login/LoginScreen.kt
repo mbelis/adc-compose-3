@@ -1,4 +1,4 @@
-package com.example.androiddevchallenge.screens.welcome
+package com.example.androiddevchallenge.ui.screen.login
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -21,7 +21,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.navigate
 import com.example.androiddevchallenge.R
+import com.example.androiddevchallenge.ui.screen.home.HOME_SCREEN_DESTINATION
 import com.example.androiddevchallenge.ui.theme.gray900
 import java.util.*
 
@@ -59,9 +61,10 @@ fun LoginScreen(navController: NavHostController) {
                     textAlign = TextAlign.Center
                 )
             }
-            Column(modifier = Modifier
-                .padding(horizontal = 16.dp)
-                .fillMaxWidth()
+            Column(
+                modifier = Modifier
+                    .padding(horizontal = 16.dp)
+                    .fillMaxWidth()
             ) {
                 Spacer(Modifier.height(40.dp))
                 OutlinedTextField(
@@ -93,7 +96,7 @@ fun LoginScreen(navController: NavHostController) {
                 )
                 Spacer(Modifier.height(16.dp))
                 Button(
-                    onClick = { /* TODO */ },
+                    onClick = { navController.navigate(HOME_SCREEN_DESTINATION) },
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(48.dp),
